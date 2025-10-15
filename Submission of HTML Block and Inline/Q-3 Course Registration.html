@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Registration Form</title>
+</head>
+<body>
+    <h2>Course Registration Form</h2>
+    <form>
+        <fieldset>
+            <legend>Student Information</legend>
+            Name: <input type="text" name="studentName" required><br><br>
+            Email: <input type="email" name="studentEmail" required><br><br>
+            Course:
+            <select name="course" required>
+                <option value="">--Select Course--</option>
+                <option value="webdev">Web Development</option>
+                <option value="datasci">Data Science</option>
+                <option value="ai">AI Fundamentals</option>
+            </select>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Available Course Schedules</legend>
+            <table border="5" width="80%">
+                <tr>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Instructor</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>10:00 AM - 12:00 PM</td>
+                    <td>Dr. Smith</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>2:00 PM - 4:00 PM</td>
+                    <td>Ms. Johnson</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>11:00 AM - 1:00 PM</td>
+                    <td>Mr. Lee</td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
