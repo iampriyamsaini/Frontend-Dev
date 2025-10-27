@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f4f7fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #1e88e5;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 50px;
+    }
+
+    .plan {
+      background-color: white;
+      flex: 1 1 300px;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 30px 20px;
+      border: 2px solid #ddd;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .plan:hover {
+      transform: translateY(-10px) scale(1.03);
+      background-color: #e3f2fd;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .plan h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #1e88e5;
+    }
+
+    .plan ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      flex-grow: 1; 
+    }
+
+    .plan ul li {
+      margin: 10px 0;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .price {
+      font-size: 2em;
+      font-weight: bold;
+      color: #333;
+      margin: 15px 0;
+    }
+
+    .plan a {
+      text-decoration: none;
+      background-color: #1e88e5;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .plan a:hover {
+      background-color: #1565c0;
+    }
+    .popular {
+      border: 3px solid #1e88e5;
+      background-color: #e3f2fd;
+      position: relative;
+    }
+
+    .popular::before {
+      content: "Most Popular";
+      position: absolute;
+      top: -15px;
+      background-color: #1e88e5;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+    @media (max-width: 700px) {
+      .pricing-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Pricing Plans</h1>
+  </header>
+
+  <div class="pricing-container">
+    <div class="plan">
+      <h2>Basic</h2>
+      <ul>
+        <li>✔ 5 Projects</li>
+        <li>✔ Basic Support</li>
+        <li>✔ 10GB Storage</li>
+        <li>✔ Community Access</li>
+      </ul>
+      <div class="price">$9/mo</div>
+      <a href="#">Get Started</a>
+    </div>
+    <div class="plan popular">
+      <h2>Standard</h2>
+      <ul>
+        <li>✔ 20 Projects</li>
+        <li>✔ Priority Support</li>
+        <li>✔ 100GB Storage</li>
+        <li>✔ Team Collaboration</li>
+      </ul>
+      <div class="price">$19/mo</div>
+      <a href="#">Choose Plan</a>
+    </div>
+    <div class="plan">
+      <h2>Premium</h2>
+      <ul>
+        <li>✔ Unlimited Projects</li>
+        <li>✔ 24/7 Support</li>
+        <li>✔ 1TB Storage</li>
+        <li>✔ Advanced Analytics</li>
+      </ul>
+      <div class="price">$29/mo</div>
+      <a href="#">Go Premium</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

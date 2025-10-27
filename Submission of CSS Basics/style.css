@@ -1,0 +1,278 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f0;
+  background-color: #1c1f26;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #272b34;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #d1d1d1;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #00bcd4;
+}
+
+main {
+  flex: 1;
+  margin-top: 100px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 5%;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  background: #2e3440;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #00bcd4;
+}
+
+.bio h2 {
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+
+.bio p {
+  line-height: 1.6;
+  font-size: 1rem;
+  max-width: 40ch;
+}
+
+footer {
+  background-color: #272b34;
+  color: #ccc;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+  border-top: 2px solid #00bcd4;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-img {
+    width: 40vw;
+    height: auto;
+  }
+  .bio h2 {
+    font-size: 1.5rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: #111;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+
+main {
+  margin-top: 80px; 
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5vh 10%;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.intro {
+  background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.intro .content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2em;
+  border-radius: 12px;
+}
+
+.intro h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.gradient-linear {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #222;
+}
+
+.gradient-linear h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+}
+
+.gradient-linear p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  margin: auto;
+}
+
+.radial {
+  background: radial-gradient(circle at center, #4a148c, #12005e);
+  background-attachment: fixed;
+}
+
+.radial .content {
+  max-width: 700px;
+}
+
+.radial h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1em;
+}
+
+.radial p {
+  font-size: 1.1rem;
+}
+
+.food {
+  background-color: #2e3440;
+  color: #fff;
+}
+
+.food h2 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.food p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+footer {
+  background: #000;
+  text-align: center;
+  padding: 1.5em;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-top: 2px solid #ffcc00;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .intro h2 {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    gap: 1em;
+  }
+}

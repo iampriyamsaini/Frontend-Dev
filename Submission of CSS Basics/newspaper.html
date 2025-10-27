@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Times — Newspaper Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f5f2e9;
+      font-family: "Georgia", serif;
+      color: #333;
+      line-height: 1.6;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .newspaper {
+      background-color: #fff;
+      padding: 40px;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      column-count: 3;
+      column-gap: 40px;
+      text-align: justify;
+    }
+
+    h1 {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+      column-span: all;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      font-weight: 600;
+      column-span: all;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+      float: left;
+      margin: 10px 20px 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .newspaper {
+        column-count: 2;
+        padding: 25px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .newspaper {
+        column-count: 1;
+      }
+      img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="newspaper">
+    <h1>The Modern Times</h1>
+    <h2>By Nakul  | Published on October 17, 2025</h2>
+
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Ocean view">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor, sem vitae feugiat malesuada, justo metus ultrices ipsum, ut vulputate lacus felis ac sapien. Integer blandit libero sed odio tincidunt aliquam.</p>
+    <p>Fusce id eros id velit facilisis rhoncus. Sed a orci nec justo tristique aliquet. Phasellus fringilla nisl eu massa laoreet, et dictum eros porttitor. Duis feugiat, velit a gravida dapibus, neque ligula consequat justo.</p>
+    <p>Donec sit amet felis non erat convallis ultricies. Curabitur vestibulum neque sit amet ligula dapibus, vel feugiat urna rhoncus. Vestibulum a leo ut urna gravida feugiat in sed neque.</p>
+    <p>Nam dictum, magna nec feugiat suscipit, justo nisl porttitor lorem, vitae egestas ipsum lectus in felis. Donec ut nisi eu ex hendrerit blandit. Maecenas bibendum mattis arcu.</p>
+    <p>Aliquam erat volutpat. Nullam eu sapien et nisi tempor viverra. Vivamus luctus lorem vel justo accumsan, vitae porttitor neque sagittis. In hac habitasse platea dictumst.</p>
+  </div>
+
+</body>
+</html>
