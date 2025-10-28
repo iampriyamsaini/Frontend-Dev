@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Homepage</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background-color: #222;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    header a:hover {
+      color: #00bcd4;
+    }
+
+    /* Main Section */
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      background-color: #f4f4f4;
+      padding: 40px;
+    }
+
+    .box {
+      background-color: white;
+      width: 250px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: rotate(2deg);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .box h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .box p {
+      color: #666;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      width: 100%;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 800px) {
+      main {
+        flex-direction: column;
+      }
+
+      header {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </header>
+
+  <main>
+    <div class="box">
+      <h2>Services</h2>
+      <p>Offering creative and technical solutions tailored to your business goals.</p>
+    </div>
+    <div class="box">
+      <h2>Projects</h2>
+      <p>Explore innovative web, AI, and mobile projects built with passion.</p>
+    </div>
+    <div class="box">
+      <h2>Contact</h2>
+      <p>Let’s collaborate! Reach out for project discussions or inquiries.</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Nakul. All rights reserved.
+  </footer>
+
+</body>
+</html>

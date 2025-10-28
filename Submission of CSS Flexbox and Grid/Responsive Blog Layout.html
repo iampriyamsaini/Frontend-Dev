@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Blog Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f6fa;
+      color: #333;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      min-height: 100vh;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      grid-area: header;
+      background-color: #1e293b;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00bcd4;
+    }
+
+    /* Sidebar */
+    aside {
+      grid-area: sidebar;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    aside h2 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      border-bottom: 2px solid #00bcd4;
+      display: inline-block;
+    }
+
+    aside ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    aside ul li {
+      margin: 10px 0;
+    }
+
+    aside ul li a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    aside ul li a:hover {
+      color: #00bcd4;
+    }
+
+    /* Main Content */
+    main {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .post {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .post:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .post h2 {
+      margin-bottom: 10px;
+      color: #1e293b;
+    }
+
+    .post p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      grid-area: footer;
+      background-color: #1e293b;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 800px) {
+      body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "main"
+          "sidebar"
+          "footer";
+      }
+
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <aside>
+    <h2>Categories</h2>
+    <ul>
+      <li><a href="#">Technology</a></li>
+      <li><a href="#">Health</a></li>
+      <li><a href="#">Travel</a></li>
+      <li><a href="#">Lifestyle</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <div class="post">
+      <h2>Understanding AI in 2025</h2>
+      <p>Explore how artificial intelligence is transforming industries, from healthcare to education, and what future trends look like.</p>
+    </div>
+
+    <div class="post">
+      <h2>Top Travel Destinations</h2>
+      <p>Discover breathtaking locations and hidden gems for your next adventure across the globe.</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 My Blog | Contact: info@myblog.com
+  </footer>
+
+</body>
+</html>

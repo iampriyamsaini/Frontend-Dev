@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Section</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      font-size: 32px;
+      color: #222;
+    }
+
+    /* Container */
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      animation: fadeIn 1.5s ease;
+    }
+
+    /* Pricing Card */
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 1s ease both;
+      animation-delay: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Highlighted Middle Card */
+    .highlight {
+      background-color: #00bcd4;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .highlight:hover {
+      transform: scale(1.1) translateY(-10px);
+    }
+
+    /* Card Text */
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    .card p {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .card .price {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .card button {
+      background-color: #222;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .card button:hover {
+      background-color: #444;
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 750px) {
+      .pricing-container {
+        flex-direction: column;
+      }
+
+      .highlight {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Pricing Plans</h1>
+
+  <div class="pricing-container">
+    <div class="card">
+      <h2>Basic</h2>
+      <p>Perfect for individuals</p>
+      <div class="price">$9/mo</div>
+      <button>Choose Plan</button>
+    </div>
+
+    <div class="card highlight">
+      <h2>Pro</h2>
+      <p>Best for professionals</p>
+      <div class="price">$19/mo</div>
+      <button>Choose Plan</button>
+    </div>
+
+    <div class="card">
+      <h2>Premium</h2>
+      <p>Ideal for teams</p>
+      <div class="price">$29/mo</div>
+      <button>Choose Plan</button>
+    </div>
+  </div>
+
+</body>
+</html>

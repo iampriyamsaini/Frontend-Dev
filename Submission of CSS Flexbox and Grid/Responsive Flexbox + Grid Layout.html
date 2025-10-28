@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Flexbox + Grid Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: #f4f7fa;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #2d3436;
+      color: #fff;
+      padding: 15px 30px;
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00cec9;
+    }
+
+    /* ---------- MAIN CONTENT ---------- */
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      padding: 20px 30px;
+      flex-grow: 1;
+    }
+
+    article {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    article h2 {
+      color: #2d3436;
+      margin-bottom: 15px;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    /* Flexbox inside article for boxes */
+    .article-boxes {
+      display: flex;
+      justify-content: space-around;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      background: #00cec9;
+      color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1;
+      text-align: center;
+      min-width: 100px;
+      transition: transform 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-8px);
+    }
+
+    /* Sidebar */
+    aside {
+      background: #dfe6e9;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #2d3436;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    /* ---------- ANIMATION ---------- */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 800px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .article-boxes {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">MyPortfolio</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Welcome to My Responsive Page</h2>
+      <p>This is a demonstration of combining CSS Grid and Flexbox for a modern, adaptable layout design.</p>
+
+      <div class="article-boxes">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+      </div>
+    </article>
+
+    <aside>
+      <h3>Sidebar</h3>
+      <p>Additional links, ads, or information can go here.</p>
+    </aside>
+  </main>
+
+  <footer>
+    © 2025 MyPortfolio | All Rights Reserved
+  </footer>
+
+</body>
+</html>

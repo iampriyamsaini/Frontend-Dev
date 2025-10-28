@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Card Flip Animation</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #74b9ff, #a29bfe);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      width: 300px;
+      height: 400px;
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      backface-visibility: hidden;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .card-front {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .card-front img {
+      width: 80%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card-front h2 {
+      color: #333;
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .card-back {
+      background-color: #2d3436;
+      color: #fff;
+      transform: rotateY(180deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="https://source.unsplash.com/random/300x200?technology" alt="Tech Image">
+        <h2>Smart Tech</h2>
+      </div>
+      <div class="card-back">
+        <p>Explore the latest innovations and futuristic designs that redefine technology for a smarter world.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

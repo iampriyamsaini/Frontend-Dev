@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #222;
+      color: #fff;
+      padding: 15px 30px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Main Content */
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .about, .image {
+      flex: 1;
+      min-width: 300px;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .about {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .image img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #222;
+      color: #fff;
+      padding: 15px 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 700px) {
+      header, main {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nakul’s Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm Nakul, a passionate developer who enjoys creating modern and user-friendly web applications. I specialize in front-end design, AI integrations, and creative problem-solving.</p>
+    </section>
+
+    <section class="image">
+      <img src="https://via.placeholder.com/400x300" alt="Profile Image">
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Nakul. All rights reserved.
+  </footer>
+
+</body>
+</html>
