@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f9fafb;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.example {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 220px;
+  text-align: center;
+}
+
+.example p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #475569;
+}
+
+.link-example {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link-example:hover {
+  background: #1e40af;
+}
+
+input {
+  padding: 8px 10px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #2563eb;
+  background: #e0f2fe;
+  outline: none;
+}
+
+.btn-example {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #10b981;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-example:active {
+  background: #059669;
+  transform: scale(0.96);
+}
+
+.list-example ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.list-example li {
+  background: #e2e8f0;
+  padding: 6px 0;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+
+.list-example li:nth-child(odd) {
+  background: #bfdbfe;
+}
+
+.list-example li:nth-child(even) {
+  background: #93c5fd;
+}
+
+footer {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .examples {
+    flex-direction: column;
+    align-items: center;
+  }
+}

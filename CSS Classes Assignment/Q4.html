@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Selectors Practice Page</title>
+  <link rel="stylesheet" href="Q4.css" />
+</head>
+<body>
+  <header>
+    <h1>CSS Selectors Practice Page</h1>
+  </header>
+
+  <main>
+    <section class="selectors-demo">
+      <h2>Element Selector Example</h2>
+      <p>This paragraph is styled using an <strong>element selector</strong>.</p>
+
+      <h2>Class and ID Selectors</h2>
+      <p class="highlight">This paragraph uses a class selector (.highlight).</p>
+      <p id="special">This paragraph uses an ID selector (#special).</p>
+
+      <h2>Attribute Selectors</h2>
+      <a href="https://example.com" target="_blank">External Link</a>
+      <a href="/local-page.html">Internal Link</a>
+      <input type="text" placeholder="Type something..." />
+      <input type="email" placeholder="Enter your email" />
+
+      <h2>Combinator Selectors</h2>
+      <div class="parent">
+        <p>This is a descendant selector example.</p>
+        <div>
+          <p>This paragraph is nested deeper (still descendant).</p>
+        </div>
+        <p class="next">This paragraph will be styled using adjacent and general sibling selectors.</p>
+        <p>Another sibling paragraph for demonstration.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created to demonstrate various CSS selectors</p>
+  </footer>
+</body>
+</html>

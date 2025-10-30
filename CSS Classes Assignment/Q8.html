@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="Q8.css" />
+</head>
+<body>
+  <header>
+    <h1>Box-Sizing Comparison</h1>
+  </header>
+
+  <main>
+    <section class="container">
+      <div class="box default-box">
+        <h2>Default (content-box)</h2>
+        <p>
+          This box uses the <strong>default box-sizing</strong> property. The width does not include padding and border, making the total box size larger than defined.
+        </p>
+      </div>
+
+      <div class="box border-box">
+        <h2>box-sizing: border-box</h2>
+        <p>
+          This box includes <strong>padding and border</strong> inside the defined width, keeping the total size fixed and easier to control in layouts.
+        </p>
+      </div>
+    </section>
+
+    <p class="info-text">
+      Notice how both boxes have the same declared width and padding,
+      but the default one appears larger due to how box-sizing works.
+    </p>
+  </main>
+
+  <footer>
+    <p>Demonstrating the impact of box-sizing in CSS layouts</p>
+  </footer>
+</body>
+</html>
