@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MySite</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f4f6fa;
+}
+header {
+  background: #1a1f25;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+header .logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #3ea6ff;
+}
+header nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+header nav a.active {
+  border-bottom: 2px solid #3ea6ff;
+}
+main {
+  display: flex;
+  flex: 1;
+}
+.sidebar {
+  width: 220px;
+  background: #1f2a44;
+  color: white;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar h3 {
+  width: 100%;
+  text-align: left;
+  padding-left: 30px;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar ul li {
+  padding: 10px 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  background: #2b3a5a;
+}
+.sidebar ul li i {
+  margin-right: 10px;
+}
+.content {
+  flex: 1;
+  padding: 40px;
+}
+.content h1 {
+  font-size: 26px;
+  color: #222;
+  margin-bottom: 10px;
+}
+.content p {
+  color: #666;
+  max-width: 600px;
+  margin-bottom: 25px;
+}
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  width: 230px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+.card-header {
+  background: linear-gradient(to bottom, #4a90e2, #003366);
+  color: white;
+  padding: 25px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.card-body {
+  padding: 20px;
+}
+.card-body h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.card-body p {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 15px;
+}
+.card-body button {
+  background: #3ea6ff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card-body button:hover {
+  background: #007acc;
+}
+footer {
+  background: #1a1f25;
+  color: white;
+  text-align: center;
+  padding: 12px 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .left,
+footer .right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer .logo {
+  background: #3ea6ff;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+footer .icons i {
+  background: white;
+  color: #1a1f25;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 0 3px;
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">MySite</div>
+  <nav>
+    <a href="#" class="active">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <aside class="sidebar">
+    <h3>Categories</h3>
+    <ul>
+      <li class="active"><i>🏠</i>Dashboard</li>
+      <li><i>📊</i>Analytics</li>
+      <li><i>🛒</i>Products</li>
+      <li><i>👥</i>Users</li>
+      <li><i>⚙️</i>Settings</li>
+    </ul>
+  </aside>
+
+  <section class="content">
+    <h1>Welcome to Our Website!</h1>
+    <p>Use this area of your website to introduce your business and provide an overview of your services or mission.</p>
+
+    <div class="card-container">
+      <div class="card">
+        <div class="card-header">Card 1</div>
+        <div class="card-body">
+          <h3>Card Item One</h3>
+          <p>Card description and details about your item or service.</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Card 2</div>
+        <div class="card-body">
+          <h3>Card Item Two</h3>
+          <p>Card description and details about your item or service.</p>
+          <button>Discover</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="left">
+    <span>Privacy Policy</span>
+    <span>Terms of Service</span>
+    <span class="logo">Logo</span>
+  </div>
+  <div class="right">
+    <span>© 2025 MyCompany. All rights reserved.</span>
+    <div class="icons">
+      <i>🔵</i><i>⚫</i><i>⚪</i>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
