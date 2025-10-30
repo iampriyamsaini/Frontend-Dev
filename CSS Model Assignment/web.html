@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MySite Dashboard</title>
+  <style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f9f9f9;
+}
+
+header .topbar {
+  background: #2c2f36;
+  color: #40a4e3;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.menu a {
+  color: #fff;
+  margin: 0 18px;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+.menu a.active,
+.menu a:hover {
+  border-bottom: 2px solid #40a4e3;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  background: #233850;
+  color: #fff;
+  min-width: 220px;
+  padding: 24px 10px;
+  height: 100vh;
+  box-shadow: 1px 0 20px rgba(0,0,0,0.06);
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 1.35em;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-item {
+  padding: 16px 25px;
+  display: flex;
+  align-items: center;
+  font-size: 1.07em;
+  margin-bottom: 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.sidebar-item i {
+  margin-right: 14px;
+  font-size: 19px;
+}
+.sidebar-item.active,
+.sidebar-item:hover {
+  background: #31445a;
+}
+
+.main-content {
+  flex: 1;
+  padding: 38px 50px;
+  min-height: 80vh;
+}
+
+.main-content h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.card-container {
+  display: flex;
+  gap: 34px;
+  margin-top: 70px;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px 2px rgba(60,81,142,0.11);
+  overflow: hidden;
+  width: 265px;
+  display: flex;
+  flex-direction: column;
+}
+.card-header {
+  background: linear-gradient(135deg,#40a4e3 0%,#233850 100%);
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: 500;
+  padding: 26px;
+  text-align: center;
+  border-bottom: 1px solid #eaecf0;
+}
+.card-body {
+  padding: 26px;
+  text-align: center;
+}
+.card-body h3 {
+  margin: 12px 0 8px;
+  font-size: 1.1em;
+}
+.card-body button {
+  margin-top: 19px;
+  padding: 10px 24px;
+  background: #40a4e3;
+  border: none;
+  color: #fff;
+  border-radius: 7px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.card-body button:hover {
+  background: #233850;
+}
+
+footer {
+  background: #22262b;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 27px;
+  padding: 18px 0;
+  position: fixed;
+  bottom: 0; left: 0; width:100%;
+  z-index: 2;
+  font-size: 15px;
+}
+
+.footer-logo {
+  background: #40a4e3;
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px 16px;
+  font-weight: bold;
+  margin: 0 4px;
+}
+.footer-icons i {
+  margin-left: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container { flex-direction: column; }
+  .sidebar {
+    min-width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .sidebar ul { display: flex; }
+  .sidebar-item { margin-right: 12px; margin-bottom: 0;}
+  .main-content { padding: 26px 14px;}
+  .card-container { flex-direction: column; gap: 22px;}
+  footer { font-size: 13px;}
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <span class="site-title">MySite</span>
+      <nav class="menu">
+        <a class="active" href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Categories</h2>
+      <ul>
+        <li class="sidebar-item active"><i class="fas fa-home"></i> Dashboard</li>
+        <li class="sidebar-item"><i class="fas fa-chart-bar"></i> Analytics</li>
+        <li class="sidebar-item"><i class="fas fa-box"></i> Products</li>
+        <li class="sidebar-item"><i class="fas fa-users"></i> Users</li>
+        <li class="sidebar-item"><i class="fas fa-cog"></i> Settings</li>
+      </ul>
+    </aside>
+    <main class="main-content">
+      <h1>Welcome to Our Website!</h1>
+      <p>
+        Use different UI visuals to reveal various sidebar-items. Beyond icons and vivid all want all as used your current start.
+      </p>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-header">Card 1</div>
+          <div class="card-body">
+            <h3>Card Item One</h3>
+            <p>Card touch and discover and your realization.</p>
+            <button>Learn More</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">Card 2</div>
+          <div class="card-body">
+            <h3>Card Item Two</h3>
+            <p>Card touch and discover and your realization.</p>
+            <button>Discover</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer>
+    <span>Privacy Policy</span>
+    <span>Terms of Service</span>
+    <span class="footer-logo">Logo</span>
+    <span>&copy; 2023 MyCompany. All rights reserved.</span>
+    <span class="footer-icons">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </span>
+  </footer>
+</body>
+</html>

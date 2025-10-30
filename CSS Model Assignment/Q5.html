@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Advanced CSS Selectors Demonstration</title>
+  <link rel="stylesheet" href="Q5.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced CSS Selectors Demonstration</h1>
+    <p class="lead">Attribute selectors, pseudo-classes, pseudo-elements, and combinators</p>
+  </header>
+
+  <main>
+    <section class="selectors">
+      <h2>1. Attribute Selectors</h2>
+      <form class="demo-form">
+        <label>Username: <input type="text" placeholder="Enter username" /></label><br>
+        <label>Password: <input type="password" placeholder="Enter password" /></label><br>
+        <button type="submit">Login</button>
+      </form>
+
+      <p>Useful links:</p>
+      <ul>
+        <li><a href="https://www.google.com">Google (https)</a></li>
+        <li><a href="http://example.com">Example (http)</a></li>
+        <li><a href="https://www.wikipedia.org">Wikipedia (https)</a></li>
+      </ul>
+    </section>
+
+    <section class="pseudo-classes">
+      <h2>2. Pseudo-classes and Pseudo-elements</h2>
+      <ul class="color-list">
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Yellow</li>
+        <li>Purple</li>
+      </ul>
+      <p class="info">Hover and focus to see effects. Even and odd items are styled differently using <code>:nth-child()</code>.</p>
+    </section>
+
+    <section class="combinators">
+      <h2>3. Combinators</h2>
+      <div class="container">
+        <h3>Descendant and Child Combinators</h3>
+        <div class="parent">
+          <p>This paragraph is inside <strong>.parent</strong>.</p>
+          <div>
+            <p>This paragraph is nested deeper inside another div.</p>
+          </div>
+        </div>
+
+        <h3>Adjacent (+) and General (~) Sibling Combinators</h3>
+        <p class="first">I am the first paragraph.</p>
+        <p>I am immediately after the first (adjacent sibling).</p>
+        <p>I am further away but still a sibling (general sibling).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created for CSS selector practice — attribute, pseudo-class, pseudo-element, and combinator usage.</p>
+  </footer>
+</body>
+</html>

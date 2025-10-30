@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Calculator</title>
+  <style>
+         body {
+            background: linear-gradient(135deg, #1d1e22, #2c3e50);
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            }
+
+        .calculator {
+            background-color: #222;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            }
+
+        .display {                  
+            background-color: #000;
+            color: rgb(237, 241, 237);
+            font-size: 2.5rem;
+            text-align: right;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            overflow-x: auto;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 20px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+        button:active {
+            background-color: #666;
+            transform: scale(0.95);
+        }
+        .operator_h {
+            background-color: #12a1f3;
+        }
+
+        .operator {
+         background-color: #f39c12;
+        }
+        .operator:hover {
+             background-color: #e67e22;
+        }
+        .zero {
+            grid-column: span 2;
+        }
+
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">0</div>
+    <div class="buttons">
+      <button class="operator_h">AC</button>
+      <button class="operator_h">±</button>
+      <button class="operator_h">%</button>
+      <button class="operator">÷</button>
+
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="operator">×</button>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button class="operator">−</button>
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button class="operator">+</button>
+
+      <button class="zero">0</button>
+      <button>.</button>
+      <button class="operator">=</button>
+    </div>
+  </div>
+</body>
+</html>

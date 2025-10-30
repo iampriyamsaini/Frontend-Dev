@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Borders & Padding — Demonstration</title>
+  <link rel="stylesheet" href="Q1.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Borders & Padding — Demonstration</h1>
+    <p class="lead">Examples of border styles, rounded corners, padding values and a hover effect.</p>
+  </header>
+
+  <main>
+ 
+    <section aria-labelledby="borders-heading">
+      <h2 id="borders-heading">Border Styles</h2>
+      
+      <div class="demo-container">
+        <article class="demo-card">
+          <div class="box border-solid">Solid border</div>
+          <p class="caption">&lt;div class="box border-solid"&gt;</p>
+        </article>
+
+        <article class="demo-card">
+          <div class="box border-dashed">Dashed border</div>
+          <p class="caption">&lt;div class="box border-dashed"&gt;</p>
+        </article>
+
+        <article class="demo-card">
+          <div class="box border-double">Double border</div>
+          <p class="caption">&lt;div class="box border-double"&gt;</p>
+        </article>
+
+        <article class="demo-card">
+          <div class="box border-groove">Groove border</div>
+          <p class="caption">&lt;div class="box border-groove"&gt;</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="radius-heading">
+      <h2 id="radius-heading">Rounded Corners (border-radius)</h2>
+      <div class="demo-container">
+        <article class="demo-card">
+          <div class="box radius-small">radius: 6px</div>
+          <p class="caption">.radius-small</p>
+        </article>
+
+        <article class="demo-card">
+          <div class="box radius-medium">radius: 16px</div>
+          <p class="caption">.radius-medium</p>
+        </article>
+
+        <article class="demo-card">
+          <div class="box radius-pill">radius: 999px (pill)</div>
+          <p class="caption">.radius-pill</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="padding-heading">
+      <h2 id="padding-heading">Padding (internal spacing)</h2>
+      <p class="lead small">Different boxes below show small, medium and large padding values.</p>
+      <div class="demo-container">
+        <article class="demo-card">
+          <div class="box pad-small">Padding: 8px</div>
+          <p class="caption">.pad-small</p>
+        </article>
+
+        <article class="demo-card">
+          <div class="box pad-medium">Padding: 20px</div>
+          <p class="caption">.pad-medium</p>
+        </article>
+
+        <article class="demo-card">
+          <div class="box pad-large">Padding: 40px</div>
+          <p class="caption">.pad-large</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="combined-heading">
+      <h2 id="combined-heading">Combined Example + Hover</h2>
+      <div class="demo-container">
+        <article class="demo-card">
+          <div class="box combined">Hover me — border color changes smoothly</div>
+          <p class="caption">Combined: dashed + rounded + padding</p>
+        </article>
+
+        <article class="demo-card">
+          <div class="box combined-2">Hover me too — subtle scale</div>
+          <p class="caption">Combined: solid + large radius</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created for CSS practice — semantic HTML5, Flexbox layout, and accessible contrast.</p>
+  </footer>
+</body>
+</html>

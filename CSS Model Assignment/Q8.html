@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Box Model Exploration</title>
+  <link rel="stylesheet" href="Q8.css" />
+</head>
+<body>
+  <header>
+    <h1>CSS Box Model Exploration</h1>
+  </header>
+
+  <main>
+    <section class="box-container">
+      <div class="box default-box">
+        <h2>Default Box Model</h2>
+        <div class="content">Content</div>
+        <p>In the default model, width and height apply only to the content area. Padding and border add extra space beyond that size.</p>
+      </div>
+
+      <div class="box border-box">
+        <h2>Border-Box Model</h2>
+        <div class="content">Content</div>
+        <p>With box-sizing: border-box, width includes padding and border, making element sizing easier to control.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Understanding the CSS box model and how elements occupy space</p>
+  </footer>
+</body>
+</html>

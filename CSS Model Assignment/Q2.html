@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Height & Width Practice Layout</title>
+  <link rel="stylesheet" href="Q2.css" />
+</head>
+<body>
+  <header>
+    <h1>Height & Width Practice Layout</h1>
+    <p class="lead">Demonstration of px, %, vh, em, min-height, max-width, and overflow properties.</p>
+  </header>
+
+  <main>
+    <section class="container" aria-labelledby="boxes-heading">
+      <h2 id="boxes-heading">Box Size Demonstration</h2>
+      <div class="box box-one">
+        <p>Box 1<br>(width: 200px, height: 150px)</p>
+      </div>
+
+      <div class="box box-two">
+        <p>Box 2<br>(width: 50%, height: 25vh)</p>
+      </div>
+
+      <div class="box box-three">
+        <p>
+          Box 3<br>(width: 20em, min-height: 100px, max-width: 400px)
+          <br /><br />
+          This box also demonstrates <strong>overflow: auto</strong>.<br />
+          Add more text here to trigger scrolling within the box. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Curabitur feugiat ligula nec viverra blandit.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created for CSS height and width demonstration — using semantic HTML5 and Flexbox.</p>
+  </footer>
+</body>
+</html>
