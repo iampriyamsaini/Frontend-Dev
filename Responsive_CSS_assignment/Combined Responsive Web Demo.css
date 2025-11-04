@@ -1,0 +1,152 @@
+/* General Page Styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f7f9fb;
+  color: #333;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0d6efd;
+  color: white;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #d9ecff;
+}
+
+/* Main Grid Layout */
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+/* Section Styling */
+.section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Gallery Section */
+.gallery-grid {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  filter: none;
+}
+
+/* Info Section */
+.info p {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Cheat Sheet Section */
+.cheat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.cheat-box {
+  background: #eef4ff;
+  border-radius: 8px;
+  padding: 15px;
+  transition: background 0.3s ease;
+}
+
+.cheat-box:hover {
+  background: #dbe8ff;
+}
+
+code {
+  background: #fff;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-family: monospace;
+  color: #d63384;
+}
+
+/* Footer */
+.footer {
+  background: #0d6efd;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Stacking Below 700px */
+@media (max-width: 700px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .gallery-grid img {
+    max-width: 100%;
+  }
+
+  .nav {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

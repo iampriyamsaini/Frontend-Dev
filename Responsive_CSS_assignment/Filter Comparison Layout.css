@@ -1,0 +1,82 @@
+/* General Page Styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f7f9fb;
+  color: #333;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  background: #0d6efd;
+  color: white;
+  padding: 20px 10px;
+}
+
+/* Main Container */
+.comparison-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+/* Image Box */
+.image-box {
+  flex: 1 1 45%;
+  max-width: 600px;
+  transition: transform 0.3s ease;
+}
+
+.image-box img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: filter 0.8s ease;
+}
+
+/* Filtered Image Effect */
+.filtered img {
+  filter: brightness(60%) contrast(120%);
+}
+
+/* Remove Filter on Hover */
+.filtered:hover img {
+  filter: none;
+}
+
+/* Captions */
+.caption {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background: #0d6efd;
+  color: white;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .comparison-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .image-box {
+    flex: 1 1 100%;
+    max-width: 90%;
+  }
+
+  .caption {
+    font-size: 0.95rem;
+  }
+}
