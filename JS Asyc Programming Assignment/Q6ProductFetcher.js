@@ -1,0 +1,2 @@
+async function loadProducts(){try{const r=await fetch("https://fakestoreapi.com/products");const d=await r.json();d.forEach(p=>{console.log("Product:",p.title);console.log("Price:$"+p.price);console.log("Image:",p.image)})}catch(e){console.log("Failed to load products. Please try again.")}}
+loadProducts()
