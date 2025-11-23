@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 - Special Offer Banner</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .banner-container { margin-top: 20px; }
+        .banner {
+            padding: 15px; margin-bottom: 10px; border-radius: 5px;
+            color: white; font-weight: bold; text-align: center;
+        }
+        .banner-a { background-color: #ff5722; } /* Deep Orange */
+        .banner-b { background-color: #4caf50; } /* Green */
+        .banner-c { background-color: #2196f3; } /* Blue */
+        .banner-d { background-color: #9c27b0; } /* Purple */
+        .banner-e { background-color: #ff9800; } /* Amber */
+        .controls { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Special Offer Banners</h1>
+    </header>
+    <main>
+        <div class="controls">
+            <button id="hide-a">Hide Banner A</button>
+            <button id="show-hidden">Show All Hidden</button>
+            |
+            <button id="slide-toggle-b">Slide Toggle Banner B</button>
+            |
+            <button id="fade-toggle-c">Fade Toggle Banner C</button>
+        </div>
+
+        <div class="banner-container">
+            <div id="banner-a" class="banner banner-a">Banner A: FLASH SALE! 48 Hours Only.</div>
+            <div id="banner-b" class="banner banner-b">Banner B: Get 20% Off Your First Purchase!</div>
+            <div id="banner-c" class="banner banner-c">Banner C: Free Shipping on all orders over $50.</div>
+            <div id="banner-d" class="banner banner-d rotating-banner" style="display: none;">Banner D: Member Exclusive Deal! Log in now.</div>
+            <div id="banner-e" class="banner banner-e rotating-banner" style="display: none;">Banner E: New Products Added Daily!</div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Q4_SpecialOfferBanner.js"></script>
+</body>
+</html>

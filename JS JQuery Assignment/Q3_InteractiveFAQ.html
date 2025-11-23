@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3 - Interactive FAQ</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .faq-item { margin-bottom: 10px; border: 1px solid #eee; }
+        .faq-question {
+            background-color: #f4f4f4; padding: 10px; cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .faq-answer {
+            padding: 10px; background-color: #fff; border-top: 1px solid #eee;
+            display: none; /* Initially hidden */
+        }
+        .hovered-question { color: #00bcd4 !important; } /* 2. Hover color */
+        .focused-parent { background-color: #ffe0b2 !important; } /* 4. Focus highlight */
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Interactive FAQ</h1>
+    </header>
+    <main class="faq-container">
+        <div class="faq-item">
+            <h2 class="faq-question">1. How do I place an order?</h2>
+            <div class="faq-answer">
+                <p>Simply navigate to the product page and click the "Add to Cart" button. You can then proceed to checkout.</p>
+                <label for="input1">Have a follow-up?</label>
+                <input type="text" id="input1" class="answer-input">
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h2 class="faq-question">2. What are your shipping options?</h2>
+            <div class="faq-answer">
+                <p>We offer standard (3-5 days) and express (1-2 days) shipping options globally.</p>
+                <label for="input2">Have a follow-up?</label>
+                <input type="text" id="input2" class="answer-input">
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h2 class="faq-question">3. Can I return a product?</h2>
+            <div class="faq-answer">
+                <p>Yes, we accept returns within 30 days of purchase, provided the item is unused and in its original packaging.</p>
+                <label for="input3">Have a follow-up?</label>
+                <input type="text" id="input3" class="answer-input">
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h2 class="faq-question">4. Do you offer gift wrapping?</h2>
+            <div class="faq-answer">
+                <p>Yes, gift wrapping is available for a small fee during the checkout process.</p>
+                <label for="input4">Have a follow-up?</label>
+                <input type="text" id="input4" class="answer-input">
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h2 class="faq-question">5. How can I contact customer support?</h2>
+            <div class="faq-answer">
+                <p>You can reach us via email, phone, or live chat on our contact page.</p>
+                <label for="input5">Have a follow-up?</label>
+                <input type="text" id="input5" class="answer-input">
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Q3_InteractiveFAQ.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8 - Dynamic Blog Posts</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .blog-post {
+            border: 1px solid #ddd; padding: 15px; margin-bottom: 20px;
+            border-radius: 5px; position: relative;
+        }
+        .post-title { margin-top: 0; }
+        .post-body { margin-bottom: 10px; }
+        .post-tags { font-style: italic; color: #666; margin-bottom: 5px; }
+        .keyword-highlight { border: 2px solid #ff9800; background-color: #fff3e0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Dynamic Blog Posts</h1>
+    </header>
+    <main>
+        <div class="controls">
+            <button id="add-new-post-btn">Add New Post (Append)</button>
+            <button id="prepend-featured-btn">Prepend Featured Post</button>
+            <button id="remove-last-btn">Remove Last Post</button>
+            <button id="add-tags-btn">Add Tags to Posts</button>
+            <button id="highlight-keyword-btn">Highlight Posts with 'Tech'</button>
+        </div>
+
+        <section id="blog-posts-container">
+            <article class="blog-post" data-keywords="Tech,AI">
+                <h2 class="post-title">The Future of AI in Modern Tech</h2>
+                <div class="post-body">AI is rapidly changing the technological landscape.</div>
+            </article>
+
+            <article class="blog-post" data-keywords="Cooking,Food">
+                <h2 class="post-title">Delicious Vegan Recipes</h2>
+                <div class="post-body">A simple guide to plant-based cooking.</div>
+            </article>
+
+            <article class="blog-post" data-keywords="Finance,Tech">
+                <h2 class="post-title">FinTech Innovations of the Decade</h2>
+                <div class="post-body">Explore the latest advances in financial technology.</div>
+            </article>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Q8_DynamicBlogPosts.js"></script>
+</body>
+</html>

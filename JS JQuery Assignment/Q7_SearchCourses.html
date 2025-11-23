@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q7 - Search Courses</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .course-list { list-style: none; padding: 0; }
+        .course-item {
+            padding: 10px; margin-bottom: 5px; border: 1px solid #ddd;
+            border-radius: 4px; transition: background-color 0.3s;
+        }
+        .highlight { background-color: yellow; font-weight: bold; } /* 2. Highlighted text */
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Course Catalogue Search</h1>
+    </header>
+    <main>
+        <input type="text" id="search-input" placeholder="Search for courses (e.g., JavaScript, Marketing)">
+        <button id="clear-search-btn">Clear Search</button>
+        <p>Found Courses: <span id="match-count">9</span></p> <ul id="course-list" class="course-list">
+            <li class="course-item">Advanced JavaScript Programming</li>
+            <li class="course-item">Introduction to HTML5 and CSS3</li>
+            <li class="course-item">Digital Marketing Strategy 101</li>
+            <li class="course-item">Python for Data Science</li>
+            <li class="course-item">Web Design Fundamentals</li>
+            <li class="course-item">Mastering jQuery and AJAX</li>
+            <li class="course-item">Social Media Marketing Campaigns</li>
+            <li class="course-item">Data Structures in JavaScript</li>
+            <li class="course-item">SEO and Content Marketing</li>
+        </ul>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Q7_SearchCourses.js"></script>
+</body>
+</html>

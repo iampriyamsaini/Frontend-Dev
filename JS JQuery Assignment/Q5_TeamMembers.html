@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5 - Team Members Directory</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .department-card { border: 1px solid #ccc; margin-bottom: 20px; padding: 15px; }
+        .department-header { background-color: #f0f0f0; padding: 10px; cursor: pointer; }
+        .team-list { list-style: none; padding: 0; }
+        .employee {
+            padding: 8px; border-bottom: 1px dotted #eee; cursor: pointer;
+            position: relative; transition: background-color 0.3s;
+        }
+        .employee:last-child { border-bottom: none; }
+        .manager { font-weight: bold; background-color: #e3f2fd; }
+        .highlighted-report { background-color: #bbdefb; } /* 1. Highlighted reports */
+        .department-highlight { background-color: #ffccbc !important; } /* 3. Department highlight */
+        .sibling-highlight { background-color: #fffde7; } /* 4. Sibling highlight */
+        .contact-info {
+            position: absolute; top: 0; left: 100%; margin-left: 10px;
+            background: #fff; border: 1px solid #000; padding: 5px 10px;
+            z-index: 10; display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Team Members Directory</h1>
+    </header>
+    <main>
+        <button id="toggle-all-teams">Collapse/Expand All Teams</button>
+        <button id="highlight-random-siblings">Highlight Random Employee's Siblings</button>
+
+        <section class="department-card">
+            <h2 class="department-header" data-department="Marketing">Marketing Department</h2>
+            <ul class="team-list">
+                <li class="employee manager" data-role="Manager" data-reports="true" data-email="mngr1@corp.com">Manager One (M)</li>
+                <li class="employee direct-report" data-role="Specialist" data-email="rep1a@corp.com">Report A</li>
+                <li class="employee direct-report" data-role="Analyst" data-email="rep1b@corp.com">Report B</li>
+                <li class="employee direct-report" data-role="Coordinator" data-email="rep1c@corp.com">Report C</li>
+            </ul>
+        </section>
+
+        <section class="department-card">
+            <h2 class="department-header" data-department="Engineering">Engineering Department</h2>
+            <ul class="team-list">
+                <li class="employee manager" data-role="Manager" data-reports="true" data-email="mngr2@corp.com">Manager Two (M)</li>
+                <li class="employee direct-report" data-role="Developer" data-email="rep2a@corp.com">Report D</li>
+                <li class="employee direct-report" data-role="QA" data-email="rep2b@corp.com">Report E</li>
+            </ul>
+        </section>
+
+        <section class="department-card">
+            <h2 class="department-header" data-department="HR">HR Department</h2>
+            <ul class="team-list">
+                <li class="employee" data-role="Recruiter" data-email="hr1@corp.com">HR Staff 1</li>
+                <li class="employee" data-role="Specialist" data-email="hr2@corp.com">HR Staff 2</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Q5_TeamMembers.js"></script>
+</body>
+</html>

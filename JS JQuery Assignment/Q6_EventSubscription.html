@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6 - Event Subscription Panel</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        #notification-status { margin-top: 10px; font-weight: bold; }
+        .topic-list { list-style: none; padding: 0; margin-top: 15px; }
+        .topic-item {
+            padding: 8px; margin-bottom: 5px; background-color: #f0f0f0;
+            border-radius: 4px; display: flex; justify-content: space-between;
+            align-items: center;
+        }
+        .remove-topic {
+            cursor: pointer; color: red; font-weight: bold; margin-left: 10px;
+        }
+        .topic-button {
+            background-color: #00bcd4; color: white; border: none; padding: 5px 10px;
+            cursor: pointer; border-radius: 3px; margin-left: 10px;
+        }
+        .topic-button:hover { background-color: #00acc1; }
+        .success-message {
+            margin-top: 15px; padding: 10px; background-color: #d4edda;
+            color: #155724; border: 1px solid #c3e6cb; border-radius: 4px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Event Subscription Panel</h1>
+    </header>
+    <main>
+        <div class="controls">
+            <button id="subscribe-btn">Subscribe to Notifications</button>
+            <button id="unsubscribe-btn">Unsubscribe from Notifications</button>
+            <p id="notification-status">Notifications: Disabled</p>
+        </div>
+
+        <hr>
+
+        <h2>Subscription Topics</h2>
+        <input type="text" id="new-topic-input" placeholder="Enter new topic name">
+        <button id="add-topic-btn">Add New Topic</button>
+
+        <ul id="subscription-topics" class="topic-list">
+            <li class="topic-item">
+                <span>Product Updates</span>
+                <button class="topic-button subscribe-topic" data-topic="updates">Follow</button>
+                <span class="remove-topic" data-topic="updates">x</span>
+            </li>
+            <li class="topic-item">
+                <span>Promotions</span>
+                <button class="topic-button subscribe-topic" data-topic="promotions">Follow</button>
+                <span class="remove-topic" data-topic="promotions">x</span>
+            </li>
+            <li class="topic-item">
+                <span>Company News</span>
+                <button class="topic-button subscribe-topic" data-topic="news">Follow</button>
+                <span class="remove-topic" data-topic="news">x</span>
+            </li>
+        </ul>
+
+        <div id="status-message" class="success-message"></div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Q6_EventSubscription.js"></script>
+</body>
+</html>

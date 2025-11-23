@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q10 - Registration Form Validation</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .error-message { color: red; font-size: 0.9em; margin-top: 5px; display: none; }
+        .invalid-field { border: 2px solid red !important; } /* 5. Highlight invalid fields */
+        .success-message {
+            margin-top: 20px; padding: 15px; background-color: #d4edda;
+            color: #155724; border: 1px solid #c3e6cb; border-radius: 4px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>User Registration</h1>
+    </header>
+    <main>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name">
+                <div id="name-error" class="error-message">Name cannot be empty.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address">
+                <div id="email-error" class="error-message">Please enter a valid email address.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Minimum 8 characters">
+                <div id="password-error" class="error-message">Password must be at least 8 characters long.</div>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <div id="form-success" class="success-message">
+            Registration Successful! Welcome aboard.
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Q10_RegistrationForm.js"></script>
+</body>
+</html>

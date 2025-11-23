@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2 - Product Highlight</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .product-list { display: flex; gap: 20px; flex-wrap: wrap; }
+        .product-card {
+            border: 1px solid #ddd; padding: 15px; width: 200px;
+            text-align: center; position: relative; cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .product-card.highlighted {
+            background-color: #e0f7fa; /* Highlighted background */
+            border-color: #00bcd4;
+        }
+        .product-details {
+            position: absolute; top: 0; left: 100%; margin-left: 10px;
+            background: #fff; border: 1px solid #00bcd4; padding: 10px;
+            width: 150px; z-index: 10; display: none; /* Initially hidden */
+        }
+        .favorite-icon { cursor: pointer; color: #ccc; font-size: 1.5em; position: absolute; top: 5px; right: 5px; }
+        .favorite-icon.selected { color: #ffeb3b; text-shadow: 0 0 5px orange; }
+        /* 4. Attribute Selector Styling: Products with a 'discount' attribute */
+        .product-card[data-discount] {
+            border: 2px solid #ff9800; /* Orange border for discount */
+            background-color: #fff3e0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Products</h1>
+    </header>
+    <main class="product-list">
+        <div class="product-card" data-stock="in-stock" data-discount="10%">
+            <span class="favorite-icon" data-product-id="1">★</span>
+            <h3>Product A</h3>
+            <p>$19.99</p>
+            <div class="product-details">10% Off! Limited Stock.</div>
+        </div>
+
+        <div class="product-card" data-stock="out-of-stock">
+            <span class="favorite-icon" data-product-id="2">★</span>
+            <h3>Product B</h3>
+            <p>$29.50</p>
+            <div class="product-details">New Arrival. Check back later for stock.</div>
+        </div>
+
+        <div class="product-card" data-stock="in-stock">
+            <span class="favorite-icon" data-product-id="3">★</span>
+            <h3>Product C</h3>
+            <p>$49.99</p>
+            <div class="product-details">Best Seller! Free Shipping.</div>
+        </div>
+
+        <div class="product-card" data-stock="in-stock" data-discount="20%">
+            <span class="favorite-icon" data-product-id="4">★</span>
+            <h3>Product D</h3>
+            <p>$15.00</p>
+            <div class="product-details">20% Off! Last Chance.</div>
+        </div>
+
+        <div class="product-card" data-stock="in-stock">
+            <span class="favorite-icon" data-product-id="5">★</span>
+            <h3>Product E</h3>
+            <p>$99.00</p>
+            <div class="product-details">Premium Quality.</div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Q2_ProductHighlight.js"></script>
+</body>
+</html>
