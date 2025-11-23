@@ -1,0 +1,3 @@
+const search=document.getElementById('search'),tbl=document.getElementById('tbl'),nores=document.getElementById('nores')
+const rows=[...tbl.tBodies[0].rows]
+search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();let any=false;rows.forEach(r=>{const text=[...r.cells].map(c=>c.textContent.toLowerCase()).join(' ');const show=text.includes(q);r.style.display=show?'':'none';if(show) any=true});nores.style.display=any?'none':'block'})

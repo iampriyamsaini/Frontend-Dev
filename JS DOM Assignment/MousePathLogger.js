@@ -1,0 +1,3 @@
+const box=document.getElementById('box'),coords=document.getElementById('coords')
+box.addEventListener('mousemove',e=>{const rect=box.getBoundingClientRect();const x=Math.round(e.clientX);const y=Math.round(e.clientY);coords.textContent=`x: ${x}, y: ${y}`})
+box.addEventListener('dblclick',e=>{const r=box.getBoundingClientRect();const x=e.clientX-r.left;const y=e.clientY-r.top;const d=document.createElement('div');d.className='dot';d.style.left=`${x}px`;d.style.top=`${y}px`;box.appendChild(d)})

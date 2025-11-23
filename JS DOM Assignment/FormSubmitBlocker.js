@@ -1,0 +1,5 @@
+const f=document.getElementById('f'),nameI=document.getElementById('name'),emailI=document.getElementById('email'),pwdI=document.getElementById('pwd')
+const eName=document.getElementById('eName'),eEmail=document.getElementById('eEmail'),ePwd=document.getElementById('ePwd'),msg=document.getElementById('msg')
+function validate(){let ok=true;eName.textContent='';eEmail.textContent='';ePwd.textContent='';if(nameI.value.trim()===''){eName.textContent='Name required';ok=false}if(!emailI.value.includes('@')){eEmail.textContent='Email must contain @';ok=false}if(pwdI.value.length<6){ePwd.textContent='Password min 6 chars';ok=false}return ok}
+f.addEventListener('submit',e=>{e.preventDefault();if(validate()){msg.textContent='Form Submitted Successfully';msg.className='success';f.reset()}})
+[nameI,emailI,pwdI].forEach(i=>i.addEventListener('input',()=>{validate();msg.textContent=''}))

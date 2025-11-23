@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Q8 Custom Dropdown</title>
+<style>
+body{font-family:Arial;padding:20px}
+.dropdown{position:relative;display:inline-block}
+.btn{padding:8px 12px;border:1px solid #ccc;cursor:pointer}
+.options{position:absolute;top:100%;left:0;border:1px solid #ccc;background:#fff;display:none;min-width:160px}
+.options div{padding:8px;cursor:pointer}
+.options div:hover{background:#f0f0f0}
+</style>
+</head>
+<body>
+<h2>Custom Dropdown</h2>
+<div class="dropdown" id="dd">
+<div class="btn" id="ddBtn">Select</div>
+<div class="options" id="opts">
+<div>Option 1</div>
+<div>Option 2</div>
+<div>Option 3</div>
+</div>
+</div>
+<script src="CustomDropdown.js"></script>
+</body>
+</html>
