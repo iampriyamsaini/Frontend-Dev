@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2 - Employee Status Dashboard</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; padding: 20px; background-color: #f4f7f6; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        h1 { color: #3f51b5; text-align: center; margin-bottom: 20px; }
+        .employee-list { list-style: none; padding: 0; }
+        .employee-row { display: flex; align-items: center; justify-content: space-between; padding: 15px; border-bottom: 1px solid #eee; transition: background-color 0.3s; border-radius: 4px; margin-bottom: 5px; }
+        .employee-row:hover { background-color: #e8eaf6; }
+        .employee-name { font-weight: bold; color: #333; }
+        .status-badge { padding: 5px 10px; border-radius: 12px; font-size: 0.9em; font-weight: 600; }
+        .active { background-color: #81c784; color: #1b5e20; }
+        .inactive { background-color: #e57373; color: #b71c1c; }
+        .toggle-btn { padding: 8px 15px; cursor: pointer; border: none; border-radius: 8px; font-weight: bold; transition: background-color 0.3s; }
+        .toggle-btn.active-switch { background-color: #4caf50; color: white; }
+        .toggle-btn.inactive-switch { background-color: #f44336; color: white; }
+        #error-message { color: red; text-align: center; margin-top: 15px; display: none; padding: 10px; border: 1px solid red; background-color: #ffebee; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Status Dashboard</h1>
+        
+        <ul id="employee-list" class="employee-list">
+            <li id="loading-indicator">Loading employees...</li>
+        </ul>
+        
+        <div id="error-message"></div>
+    </div>
+    <script src="Q2_EmployeeDashboard.js"></script>
+</body>
+</html>

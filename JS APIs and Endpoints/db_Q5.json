@@ -1,0 +1,46 @@
+{
+  "timetable": [
+    {
+      "day": "Monday",
+      "subject": "Advanced Web Technologies",
+      "faculty": "Dr. E. Smith",
+      "time": "10:00 AM - 11:30 AM"
+    },
+    {
+      "day": "Monday",
+      "subject": "Database Management Systems",
+      "faculty": "Prof. A. Singh",
+      "time": "12:00 PM - 01:30 PM"
+    },
+    {
+      "day": "Tuesday",
+      "subject": "Data Structures & Algorithms",
+      "faculty": "Dr. M. Khan",
+      "time": "09:00 AM - 10:30 AM"
+    },
+    {
+      "day": "Wednesday",
+      "subject": "Object-Oriented Programming",
+      "faculty": "Prof. B. Sharma",
+      "time": "11:30 AM - 01:00 PM"
+    },
+    {
+      "day": "Thursday",
+      "subject": "Machine Learning Fundamentals",
+      "faculty": "Dr. E. Smith",
+      "time": "02:00 PM - 03:30 PM"
+    },
+    {
+      "day": "Friday",
+      "subject": "Software Engineering Lab",
+      "faculty": "Prof. A. Singh",
+      "time": "10:00 AM - 12:00 PM"
+    },
+    {
+      "day": "Saturday",
+      "subject": "Optional Seminar",
+      "faculty": "Various",
+      "time": "09:00 AM - 10:00 AM"
+    }
+  ]
+}

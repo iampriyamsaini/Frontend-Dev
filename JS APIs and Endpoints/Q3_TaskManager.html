@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3 - Task Manager With Filters</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; padding: 20px; background-color: #e8f5e9; }
+        .container { max-width: 700px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        h1 { color: #388e3c; text-align: center; margin-bottom: 20px; }
+        .controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding: 15px; background-color: #f1f8e9; border-radius: 8px; }
+        #sort-dropdown { padding: 8px; border-radius: 6px; border: 1px solid #ccc; }
+        #task-list { list-style: none; padding: 0; }
+        .task-item { display: flex; align-items: center; padding: 15px; border-bottom: 1px solid #e0e0e0; transition: background-color 0.3s; }
+        .task-item:last-child { border-bottom: none; }
+        .task-title { flex-grow: 1; margin-right: 15px; font-size: 1.1em; }
+        .task-item.completed .task-title { text-decoration: line-through; color: #757575; }
+        .priority-badge { padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: 600; }
+        .High { background-color: #f44336; color: white; }
+        .Medium { background-color: #ffc107; color: #333; }
+        .Low { background-color: #4caf50; color: white; }
+        .checkbox-label { cursor: pointer; display: flex; align-items: center; }
+        .loading-text { text-align: center; color: #388e3c; padding: 20px; display: none; }
+        .no-tasks { text-align: center; color: #757575; padding: 20px; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Project Task Manager</h1>
+        
+        <div class="controls">
+            <label for="sort-dropdown">Filter/Sort:</label>
+            <select id="sort-dropdown">
+                <option value="all">All Tasks</option>
+                <option value="priority=Low">Low Priority</option>
+                <option value="priority=Medium">Medium Priority</option>
+                <option value="priority=High">High Priority</option>
+                <option value="completed=false">Pending</option>
+                <option value="completed=true">Completed</option>
+            </select>
+        </div>
+
+        <div id="loading-indicator" class="loading-text">Loading tasks...</div>
+        
+        <ul id="task-list">
+            
+        </ul>
+    </div>
+    <script src="Q3_TaskManager.js"></script>
+</body>
+</html>

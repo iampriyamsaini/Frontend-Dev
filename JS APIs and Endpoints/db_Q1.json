@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Mechanical Keyboard Pro",
+      "price": 120.5,
+      "image": "https://placehold.co/100x100/1e88e5/white?text=KBD",
+      "category": "Tech"
+    },
+    {
+      "id": 2,
+      "name": "Ergonomic Office Chair",
+      "price": 350.0,
+      "image": "https://placehold.co/100x100/43a047/white?text=Chair",
+      "category": "Furniture"
+    },
+    {
+      "id": 3,
+      "name": "4K Ultra Monitor",
+      "price": 499.99,
+      "image": "https://placehold.co/100x100/ff6f00/white?text=Monitor",
+      "category": "Tech"
+    },
+    {
+      "id": 4,
+      "name": "Leather Wallet Classic",
+      "price": 45.0,
+      "image": "https://placehold.co/100x100/6d4c41/white?text=Wallet",
+      "category": "Accessories"
+    },
+    {
+      "id": 5,
+      "name": "Advanced Wireless Mouse",
+      "price": 75.99,
+      "image": "https://placehold.co/100x100/e91e63/white?text=Mouse",
+      "category": "Tech"
+    },
+    {
+      "id": 6,
+      "name": "Bluetooth Speaker Mini",
+      "price": 60.0,
+      "image": "https://placehold.co/100x100/9e9d24/white?text=Audio",
+      "category": "Audio"
+    }
+  ]
+}

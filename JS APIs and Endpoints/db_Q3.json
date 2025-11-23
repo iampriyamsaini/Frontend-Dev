@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Review Q3 financial reports",
+      "priority": "High",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Send meeting minutes to team",
+      "priority": "Low",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Plan Q4 marketing strategy",
+      "priority": "High",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "Check email backlog",
+      "priority": "Medium",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "title": "Update project documentation",
+      "priority": "Medium",
+      "completed": true
+    },
+    {
+      "id": 6,
+      "title": "Refactor legacy codebase",
+      "priority": "High",
+      "completed": false
+    }
+  ]
+}

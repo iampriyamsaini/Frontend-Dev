@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 - Multi-API Dashboard</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; padding: 20px; background-color: #fce4ec; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+        h1 { color: #ad1457; text-align: center; margin-bottom: 30px; }
+        .dashboard-grid { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+        .card { flex: 1 1 250px; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); text-align: center; }
+        .card-title { font-size: 1.2em; color: #4a148c; margin-bottom: 10px; }
+        .card-value { font-size: 3em; font-weight: bold; color: #d81b60; }
+        .skeleton { background-color: #f0f0f0; border-radius: 4px; animation: pulse 1.5s infinite; }
+        .skeleton-title { height: 20px; width: 60%; margin: 0 auto 10px auto; }
+        .skeleton-value { height: 45px; width: 40%; margin: 0 auto; }
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+        #warning-message { color: #ff9800; background-color: #fff3e0; border: 1px solid #ff9800; padding: 10px; border-radius: 6px; margin-top: 20px; text-align: center; display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Multi-API Data Dashboard</h1>
+        
+        <div class="dashboard-grid">
+            
+            <div class="card" id="users-card">
+                <div class="card-title skeleton skeleton-title"></div>
+                <div class="card-value skeleton skeleton-value"></div>
+            </div>
+
+            <div class="card" id="orders-card">
+                <div class="card-title skeleton skeleton-title"></div>
+                <div class="card-value skeleton skeleton-value"></div>
+            </div>
+
+            <div class="card" id="products-card">
+                <div class="card-title skeleton skeleton-title"></div>
+                <div class="card-value skeleton skeleton-value"></div>
+            </div>
+
+        </div>
+
+        <div id="warning-message"></div>
+    </div>
+    <script src="Q4_MultiAPIDashboard.js"></script>
+</body>
+</html>
