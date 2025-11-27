@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3. jQuery AJAX Method</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h2>Check Console (F12) for jQuery Output</h2>
+    <script>
+        const BASE_URL = "http://localhost:3000/students";
+
+        function ajaxRequest(method, url, data = null) {
+            return $.ajax({
+                url: url,
+                method: method,
+                contentType: "application/json",
+                data: data ? JSON.stringify(data) : null
+            });
+        }
+
+        async function runAllRequests() {
+            console.log("--- Starting jQuery Operations ---");
+            
+            await ajaxRequest("GET", BASE_URL).then(d => console.log("GET All:", d));
+            await ajaxRequest("GET", `${BASE_URL}/1`).then(d => console.log("GET One:", d));
+            await ajaxRequest("POST", BASE_URL, { name: "Aman jQuery", score: 75 }).then(d => console.log("POST Added:", d));
+            await ajaxRequest("PUT", `${BASE_URL}/1`, { name: "Ram jQuery Update", score: 100 }).then(d => console.log("PUT Updated:", d));
+            await ajaxRequest("PATCH", `${BASE_URL}/2`, { score: 50 }).then(d => console.log("PATCH Updated:", d));
+            
+            try {
+                await ajaxRequest("DELETE", `${BASE_URL}/3`).then(() => console.log("DELETE Done"));
+            } catch(e) { console.log("Could not delete (maybe already deleted)"); }
+            
+            console.log("--- Finished ---");
+        }
+        runAllRequests();
+    </script>
+</body>
+</html>

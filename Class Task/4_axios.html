@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>4. Axios Method</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h2>Check Console (F12) for Axios Output</h2>
+    <script>
+        const BASE_URL = "http://localhost:3000/students";
+
+        function axiosRequest(method, url, data = null) {
+            return axios({
+                method: method,
+                url: url,
+                data: data,
+                headers: { "Content-Type": "application/json" }
+            }).then(response => response.data);
+        }
+
+        async function runAllRequestsAxios() {
+            console.log("--- Starting Axios Operations ---");
+            
+            await axiosRequest("GET", BASE_URL).then(d => console.log("GET All:", d));
+            await axiosRequest("GET", `${BASE_URL}/1`).then(d => console.log("GET One:", d));
+            await axiosRequest("POST", BASE_URL, { name: "Aman Axios", score: 99 }).then(d => console.log("POST Added:", d));
+            await axiosRequest("PUT", `${BASE_URL}/1`, { name: "Ram Axios Update", score: 96 }).then(d => console.log("PUT Updated:", d));
+            await axiosRequest("PATCH", `${BASE_URL}/2`, { score: 88 }).then(d => console.log("PATCH Updated:", d));
+            
+            try {
+                 await axiosRequest("DELETE", `${BASE_URL}/3`).then(() => console.log("DELETE Done"));
+            } catch(e) { console.log("Item might already be deleted"); }
+
+            console.log("--- Finished ---");
+        }
+        runAllRequestsAxios();
+    </script>
+</body>
+</html>
